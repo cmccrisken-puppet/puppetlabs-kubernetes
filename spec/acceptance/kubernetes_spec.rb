@@ -29,6 +29,8 @@ describe 'the Kubernetes module' do
           class {'kubernetes':
                   controller => true,
                   schedule_on_controller => true,
+                  kubernetes_version => '1.16.0',
+                  kubernetes_package_version => '1.16.0-00',
                   environment  => ['HOME=/root', 'KUBECONFIG=/etc/kubernetes/admin.conf'],
                   ignore_preflight_errors => ['NumCPU'],
                 }
